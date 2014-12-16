@@ -1,5 +1,6 @@
 <h1>All ads:</h1>
 
+<%= link_to 'add new', ads_path   %>
 <% @ads.each do |ad|  %>
   <%= render partial: 'ad', locals: { ad: ad }  %>
 <% end %>
