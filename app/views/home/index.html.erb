@@ -1,0 +1,5 @@
+<h1>All ads:</h1>
+
+<% @ads.each do |ad|  %>
+  <%= render partial: 'ad', locals: { ad: ad }  %>
+<% end %>
