@@ -4,6 +4,8 @@
   <p> Description </p>
   <%= f.text_area :description  %>
 
+  <%= f.select :category_id, Category.all.map { |c| [ c.name, c.id ] }  %>
+
   <p>
   <%= f.submit 'go go go'  %>
   </p>

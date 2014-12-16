@@ -17,6 +17,6 @@ class HomeController < ApplicationController
   end
 
   def parameters
-    params.require(:ad).permit(:title, :description)
+    params.require(:ad).permit(:title, :description, :category_id)
   end
 end
