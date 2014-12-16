@@ -5,21 +5,36 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="http://bootswatch.com/flatly/bootstrap.min.css" >
 </head>
 <body>
 
-<nav>
-  <% if current_user %>
-    Hi, <%= current_user.email  %>
+<nav class="navbar navbar-fixed-top" role="navigation">
+  <div class="container">
+    <ul class="nav navbar-nav">
+      <% if current_user %>
+        Hi, <%= current_user.email  %>
   <% else %>
-    <%= link_to 'log in', new_user_session_path %>
-    <%= link_to 'sign up', new_user_registration_path %>
-  <% end %>
+        <li> <%= link_to 'log in', new_user_session_path %></li>
+      <li><%= link_to 'sign up', new_user_registration_path %></li>
+    <% end %>
+    </ul>
+  </div>
 </nav>
 
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
-<%= yield %>
+<div class='container'>
+  <%= yield %>
+</div>
 
 </body>
 </html>

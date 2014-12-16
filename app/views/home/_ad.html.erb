@@ -1,16 +1,14 @@
-<div class='ad'>
-  <p>
-  <strong>
+<div class='panel panel-default'>
+  <div class="panel-heading">
     <%= ad.title  %>
-</strong>
-  </p>
-  <p>
-  <%= ad.description  %>
-  </p>
+  </div>
 
-  <p>
-  <em>
+  <div class="panel-body">
+    <p><%= ad.description  %></p>
+  </div>
+
+  <div class="panel-footer">
     Filled under: <%= ad.category.name  %> by <%= ad.user.email  %> on <%= ad.created_at  %>
-</em>
-  </p>
+</div>
+
 </div>
